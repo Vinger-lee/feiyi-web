@@ -1,0 +1,103 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // 传统中国风配色
+        ink: {
+          50: '#f6f6f6',
+          100: '#e7e7e7',
+          200: '#d1d1d1',
+          300: '#b0b0b0',
+          400: '#888888',
+          500: '#6d6d6d',
+          600: '#5d5d5d',
+          700: '#4f4f4f',
+          800: '#454545',
+          900: '#3d3d3d',
+          950: '#1a1a1a',
+        },
+        vermilion: {
+          50: '#fef6f3',
+          100: '#fceae4',
+          200: '#f9d4c9',
+          300: '#f3b5a3',
+          400: '#ea8b6e',
+          500: '#df6844',
+          600: '#d44a28',
+          700: '#b13a20',
+          800: '#8f311e',
+          900: '#752b1c',
+          950: '#401410',
+        },
+        gold: {
+          50: '#fdfbf3',
+          100: '#faf4de',
+          200: '#f5e6bc',
+          300: '#eed494',
+          400: '#e6bd6b',
+          500: '#dea847',
+          600: '#ce8e2e',
+          700: '#ab7025',
+          800: '#8a5922',
+          900: '#724a21',
+          950: '#3e2510',
+        },
+        jade: {
+          50: '#f0f9f4',
+          100: '#dcf2e3',
+          200: '#bce4ca',
+          300: '#8ed2a6',
+          400: '#5ab97e',
+          500: '#359e5d',
+          600: '#25804a',
+          700: '#1f663c',
+          800: '#1c5233',
+          900: '#19442c',
+          950: '#0e2418',
+        },
+        paper: {
+          50: '#fefdfb',
+          100: '#fdf9f2',
+          200: '#faf3e3',
+          300: '#f5e8cc',
+          400: '#eddab0',
+          500: '#e5cb8f',
+          600: '#dbb46d',
+          700: '#b89352',
+          800: '#957744',
+          900: '#7a6239',
+          950: '#3f311d',
+        },
+      },
+      fontFamily: {
+        calligraphy: ['"ZCOOL XiaoWei"', '"Noto Serif SC"', 'serif'],
+        chinese: ['"Noto Sans SC"', 'sans-serif'],
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'slide-up': 'slideUp 0.6s ease-out',
+        'float': 'float 3s ease-in-out infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
+    },
+  },
+  plugins: [],
+}

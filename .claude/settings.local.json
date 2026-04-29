@@ -1,0 +1,19 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write(*.tsx) || Write(*.ts) || Write(*.css)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd $CLAUDE_PROJECT_DIR && npx tsc -b --noEmit 2>&1 || true"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": ["Bash(npm run *)", "Read", "Write(*.tsx)", "Write(*.ts)", "Edit"],
+    "ask": ["Bash(git push *)"]
+  }
+}
