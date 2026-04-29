@@ -21,7 +21,7 @@
 src/
 ├── components/      # 可复用 UI 组件（HeritageGlobe, HeroComponents, Icons, TiltCard 等）
 ├── pages/           # 页面级组件（ChatPage, EncyclopediaPage, CategoryPage 等）
-├── services/        # API 调用（cozeStream.ts, storage.ts, cozeApi.ts）
+├── services/        # API 调用（cozeStream.ts, storage.ts）
 ├── hooks/           # 自定义 hooks（useScrollDirection）
 ├── data/            # 非遗数据（不可修改）
 ├── types/           # 类型定义（不可修改）
@@ -37,6 +37,17 @@ src/
 - 每次修改后必须 `npm run build` 验证
 - 确保 dist/ 不包含 .env 文件
 - ChatPage 通过 Vite proxy `/api/coze` 调用 Coze API，生产环境需要代理服务器
+- `.env` 文件不得添加到 Git 追踪（已在 .gitignore 中排除）
+
+## 安全注意事项
+- `cozeApi.ts` 已删除（内含硬编码 API Token，死代码）
+- 环境变量通过 `import.meta.env.VITE_*` 读取，需在 `.env` 中配置
+- 参考 `.env.example` 查看所需变量的占位符格式
+
+## GitHub
+- 远程仓库：`origin → https://github.com/Vinger-lee/feiyi-web.git`
+- 推送需通过代理：`ALL_PROXY=socks5h://127.0.0.1:7897 git -c http.proxy=socks5h://127.0.0.1:7897 push`
+- GitHub Actions 部署时从仓库 Secrets 读取 `VITE_COZE_TOKEN` 和 `VITE_COZE_BOT_ID`
 
 ## 性能基线
 - 首屏 JS < 300 kB (gzip)
