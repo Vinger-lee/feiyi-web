@@ -1,4 +1,4 @@
-const COZE_STREAM_URL = import.meta.env.VITE_COZE_API_URL || '/api/coze';
+const COZE_STREAM_URL = import.meta.env.VITE_COZE_API_URL || 'https://feiyi-coze-proxy.vinger-lee.workers.dev/';
 const COZE_PROJECT_ID = import.meta.env.VITE_COZE_BOT_ID || '7623251646365122566';
 const COZE_TOKEN = import.meta.env.VITE_COZE_TOKEN || '';
 
