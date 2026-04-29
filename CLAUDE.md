@@ -43,6 +43,7 @@ src/
 - `cozeApi.ts` 已删除（内含硬编码 API Token，死代码）
 - 环境变量通过 `import.meta.env.VITE_*` 读取，需在 `.env` 中配置
 - 参考 `.env.example` 查看所需变量的占位符格式
+- 生产环境需要设置 `VITE_COZE_API_URL` 为 Coze Bot 的直连地址（否则会回退到 Vite 代理路径 `/api/coze`）
 
 ## GitHub
 - 远程仓库：`origin → https://github.com/Vinger-lee/feiyi-web.git`

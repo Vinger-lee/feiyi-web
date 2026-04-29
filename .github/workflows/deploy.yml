@@ -34,6 +34,7 @@ jobs:
         env:
           VITE_COZE_TOKEN: ${{ secrets.VITE_COZE_TOKEN }}
           VITE_COZE_BOT_ID: ${{ secrets.VITE_COZE_BOT_ID }}
+          VITE_COZE_API_URL: ${{ secrets.VITE_COZE_API_URL }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
